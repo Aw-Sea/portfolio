@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% block title %}Тег: {{ tag }} — {{ SITENAME }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <!-- Основной контент -->
+        <div class="col-lg-8">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h1 class="card-title h2">Статьи с тегом "{{ tag }}"</h1>
+                    <p class="text-muted">Найдено статей: {{ articles|count }}</p>
+                </div>
+            </div>
+
+            {% if articles %}
+                {% for article in articles %}
+                    <div class="card article-card mb-4">
+                        {% if article.cover %}
+                        <img src="{{ SITEURL }}/{{ article.cover }}" class="card-img-top" alt="{{ article.title }}">
+                        {% endif %}
+
+                        <div class="card-body">
+                            <h2 class="card-title h4">
+                                <a href="{{ SITEURL }}/{{ article.url }}" class="text-decoration-none text-dark">
+                                    {{ article.title }}
+                                </a>
+                            </h2>
+
+                            <div class="article-meta mb-2">
+                                <span class="text-muted">
+                                    <i class="far fa-calendar-alt"></i> {{ article.locale_date }}
+                                </span>
+                                <span class="ms-3 text-muted">
+                                    <i class="far fa-folder"></i>
+                                    <a href="{{ SITEURL }}/{{ article.category.url }}" class="text-decoration-none">
+                                        {{ article.category }}
+                                    </a>
+                                </span>
+                            </div>
+
+                            <p class="card-text flex-grow-1">{{ article.summary|striptags|truncate(120) }}</p>
+
+                            <div class="article-tags mb-3">
+                                {% for tag in article.tags %}
+                                    <a href="{{ SITEURL }}/{{ tag.url }}" class="badge bg-primary text-decoration-none me-1">
+                                        {{ tag }}
+                                    </a>
+                                {% endfor %}
+                            </div>
+
+                            <a href="{{ SITEURL }}/{{ article.url }}" class="btn btn-outline-primary btn-sm">
+                                Читать далее <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="card">
+                    <div class="card-body text-center py-5">
+                        <i class="fas fa-tags fa-3x text-muted mb-3"></i>
+                        <h3 class="text-muted">Пока нет статей с этим тегом</h3>
+                        <p class="text-muted">Но они обязательно появятся!</p>
+                        <a href="{{ SITEURL }}" class="btn btn-primary mt-2">Вернуться на главную</a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Сайдбар -->
+        <div class="col-lg-4">
+            <div class="card mb-4">
+                <div class="card-header bg-primary">
+                    <h5 class="mb-0">Другие теги</h5>
+                </div>
+                <div class="card-body">
+                    <div class="tags-cloud">
+                        {% for tag, articles in tags %}
+                            <a href="{{ SITEURL }}/{{ tag.url }}"
+                               class="badge bg-secondary text-decoration-none me-1 mb-1">
+                                {{ tag }} ({{ articles|count }})
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-primary">
+                    <h5 class="mb-0">Категории</h5>
+                </div>
+                <div class="card-body">
+                    <div class="categories-list">
+                        {% for category, articles in categories %}
+                            <a href="{{ SITEURL }}/{{ category.url }}"
+                               class="d-block text-decoration-none text-dark mb-2">
+                                <i class="far fa-folder me-1"></i>
+                                {{ category }} <span class="text-muted">({{ articles|count }})</span>
+                            </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-info">
+                    <h5 class="mb-0 text-white">Последние статьи</h5>
+                </div>
+                <div class="card-body">
+                    <div class="latest-articles">
+                        {% for article in articles %}
+                            {% if loop.index <= 5 %}
+                                <a href="{{ SITEURL }}/{{ article.url }}"
+                                   class="d-block text-decoration-none text-dark mb-2 p-2 rounded">
+                                    <i class="far fa-file-alt me-1"></i>
+                                    {{ article.title|truncate(40) }}
+                                    <br>
+                                    <small class="text-muted">{{ article.locale_date }}</small>
+                                </a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

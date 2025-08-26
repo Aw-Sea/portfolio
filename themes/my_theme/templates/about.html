@@ -1,0 +1,265 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <!-- Заголовок и навигация -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h1 class="display-5 fw-bold text-center mb-3">Обо мне</h1>
+            <nav class="d-flex justify-content-center flex-wrap gap-2 mb-4">
+                <a href="#skills" class="btn btn-outline-primary btn-sm">🧩 Навыки</a>
+                <a href="#experience" class="btn btn-outline-primary btn-sm">💼 Опыт работы</a>
+                <a href="#education" class="btn btn-outline-primary btn-sm">🎓 Образование</a>
+                <a href="#hobbies" class="btn btn-outline-primary btn-sm">⚡ Дополнительно</a>
+            </nav>
+
+            <!-- Краткое описание -->
+            <div class="text-center">
+                <p class="lead text-muted">Аналитичный и усидчивый Junior Full-Stack разработчик с опытом более 10 лет системной работы с данными и контентом</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основной контент в две колонки -->
+    <div class="row">
+        <!-- Левая колонка: Навыки и Образование -->
+        <div class="col-lg-6">
+            <!-- Навыки -->
+            <section id="skills" class="mb-5">
+                <h2 class="mb-4 border-bottom pb-2">
+                    <i class="fas fa-code text-primary me-2"></i>Технические навыки
+                </h2>
+
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">🛠️ Технический стек</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <h6 class="fw-bold text-primary">Frontend</h6>
+                                    <div class="d-flex flex-wrap gap-1 mb-2">
+                                        <span class="badge bg-primary">HTML5</span>
+                                        <span class="badge bg-primary">CSS3</span>
+                                        <span class="badge bg-primary">JavaScript</span>
+                                    </div>
+                                    <small class="text-muted">jQuery, AJAX, JSON</small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <h6 class="fw-bold text-primary">Backend</h6>
+                                    <div class="d-flex flex-wrap gap-1">
+                                        <span class="badge bg-success">Python</span>
+                                        <span class="badge bg-success">Django</span>
+                                        <span class="badge bg-success">SQLite</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <h6 class="fw-bold text-primary">Инструменты</h6>
+                                    <div class="d-flex flex-wrap gap-1 mb-2">
+                                        <span class="badge bg-info">Git</span>
+                                        <span class="badge bg-info">GitHub</span>
+                                        <span class="badge bg-info">WordPress</span>
+                                    </div>
+                                    <small class="text-muted">Photoshop (базовый)</small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <h6 class="fw-bold text-primary">Дополнительно</h6>
+                                    <div class="d-flex flex-wrap gap-1">
+                                        <span class="badge bg-warning text-dark">Movavi</span>
+                                        <span class="badge bg-warning text-dark">Canva</span>
+                                        <span class="badge bg-warning text-dark">MS Office</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">🌟 Soft Skills</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-secondary">Ответственность</span>
+                            <span class="badge bg-secondary">Быстрая обучаемость</span>
+                            <span class="badge bg-secondary">Аналитическое мышление</span>
+                            <span class="badge bg-secondary">Управление проектами</span>
+                            <span class="badge bg-secondary">Работа в команде</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Образование -->
+            <section id="education" class="mb-5">
+                <h2 class="mb-4 border-bottom pb-2">
+                    <i class="fas fa-graduation-cap text-primary me-2"></i>Образование
+                </h2>
+
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">🎯 Веб-разработка (Python)</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Академия TOP | 2023-2024</h6>
+                        <p class="mb-2">Профессиональная переподготовка</p>
+                        <ul class="mb-0 ps-3">
+                            <li>Программа: «Создание веб-приложений на Python»</li>
+                            <li>Диплом о профессиональной переподготовке</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">📊 Экономика и управление</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Пензенский государственный технологический университет | 2014–2018</h6>
+                        <p class="mb-2">Бакалавр профессионального обучения</p>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">👩‍🏫 Педагогическое образование</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-2 text-muted">Белинский многопрофильный колледж | 2011–2014</h6>
+                        <p class="mb-2">Учитель начальных классов</p>
+                        <ul class="mb-0 ps-3">
+                            <li>Дополнительная квалификация: «Преподавание информатики в начальных классах»</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Правая колонка: Опыт работы и Дополнительно -->
+        <div class="col-lg-6">
+            <!-- Опыт работы -->
+            <section id="experience" class="mb-5">
+                <h2 class="mb-4 border-bottom pb-2">
+                    <i class="fas fa-briefcase text-primary me-2"></i>Опыт работы
+                </h2>
+
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">🌐 Веб-администратор / Библиотекарь</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-subtitle mb-3 text-muted">МБУ "ЦБС г. Пенза" | 2014-н.в.</h6>
+
+                        <div class="mb-3">
+                            <h6 class="fw-bold text-success">🚀 Веб-разработка:</h6>
+                            <ul class="mb-2">
+                                <li>Разработка и поддержка сайта на Ucoz (HTML/CSS, адаптивность, кроссбраузерность)</li>
+                                <li>Администрирование WordPress (плагины, безопасность, обновления)</li>
+                                <li>Базовая SEO-оптимизация и анализ статистики посещений</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-3">
+                            <h6 class="fw-bold text-success">📊 Управление проектами:</h6>
+                            <ul class="mb-2">
+                                <li>Организация полного цикла 50+ мероприятий (онлайн и офлайн)</li>
+                                <li>Разработка концепций, составление смет, координация подготовки</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-3">
+                            <h6 class="fw-bold text-success">🎨 SMM и контент:</h6>
+                            <ul class="mb-2">
+                                <li>Разработка контент-стратегии для социальных сетей</li>
+                                <li>Создание графики (Canva/Photoshop), монтаж видео (Movavi)</li>
+                                <li>Модерация сообщества (500+ подписчиков)</li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-3">
+                            <h6 class="fw-bold text-success">📈 Работа с данными:</h6>
+                            <ul class="mb-2">
+                                <li>Систематизация баз данных (5000+ позиций) в Excel</li>
+                                <li>Сводные таблицы, фильтрация, автоматизация отчетности</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h6 class="fw-bold text-success">🔧 Техническая поддержка:</h6>
+                            <ul class="mb-0">
+                                <li>Обучение и консультирование 20+ коллег</li>
+                                <li>Техническая подготовка мероприятий (оборудование, ПО)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Дополнительная информация -->
+            <section id="hobbies" class="mb-5">
+                <h2 class="mb-4 border-bottom pb-2">
+                    <i class="fas fa-star text-primary me-2"></i>Дополнительно
+                </h2>
+
+                <div class="card border-0 shadow-sm mb-3">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="mb-0">⚙️ Технические хобби</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="mb-0">
+                            <li><strong>Сборка и апгрейд ПК:</strong> Подбор комплектующих, диагностика, оптимизация</li>
+                            <li><strong>Игровые движки:</strong> Изучение Unity и Godot, основ геймдизайна</li>
+                            <li><strong>Технический писатель:</strong> Создание документации и инструкций</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="mb-0">🎨 Творческие навыки</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="mb-0">
+                            <li><strong>Графический дизайн:</strong> Создание афиш, баннеров, презентаций</li>
+                            <li><strong>Видеомонтаж:</strong> Базовый монтаж роликов в Movavi</li>
+                            <li><strong>Копирайтинг:</strong> Написание технических и образовательных текстов</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<style>
+.card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+.badge {
+    font-size: 0.8em;
+    padding: 0.5em 0.7em;
+    border-radius: 6px;
+}
+.section-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+.nav-link {
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+}
+</style>
+{% endblock %}

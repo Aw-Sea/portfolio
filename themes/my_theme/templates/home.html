@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5 home-page">
+    <!-- Главный заголовок и фото -->
+<header class="row align-items-center rounded-3 mb-5">
+    <div class="col-md-4 text-center">
+        <img src="{{ SITEURL }}/images/foto.jpg" alt="Фото Ларисы" class="img-fluid rounded-circle profile-photo shadow">
+    </div>
+    <div class="col-md-8">
+        <h1 class="display-4">Привет! Я <span class="text-light">Лариса</span></h1>
+        <p class="lead text-light">Веб-разработчик (Junior Full-Stack)</p>
+        <p class="text-light fst-italic mb-3"><small>Python/Django | JavaScript | Верстка | Работа с данными</small></p>
+        <p class="text-light  text-justify">Создаю функциональные и удобные веб-приложения. Имею опыт полного цикла: от идеи и верстки до backend-логики и администрирования.</p>
+    </div>
+</header>
+
+    <!-- О себе -->
+    <section class="mb-5 p-4 bg-light rounded">
+        <h2 class="mb-4"><i class="fas fa-bullseye me-2"></i>Моя цель</h2>
+        <div class="row">
+            <div class="col-lg-10">
+                <p class="text-justify">Аналитичный и усидчивый Junior full-stack-разработчик с опытом более 10 лет системной работы с данными, контентом и сложными организационными процессами. Ищу возможность применять навыки в веб-разработке для создания логичных и удобных продуктов. Готова к глубокому погружению в задачи и быстрому обучению в команде опытных коллег.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Направления работы -->
+    <section class="mb-5">
+        <h2 class="mb-4 text-center"><i class="fas fa-laptop-code me-2"></i>Что я делаю</h2>
+        <div class="row g-4">
+            <!-- Frontend -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-primary">
+                    <div class="card-body text-center">
+                        <i class="fas fa-paint-brush fa-3x mb-3 text-primary"></i>
+                        <h3 class="h5 card-title">Frontend</h3>
+                        <p class="card-text">Вёрстка красивых и современных веб-страниц с полной адаптивностью под любые устройства и интерактивностью</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-success">
+                    <div class="card-body text-center">
+                        <i class="fas fa-server fa-3x mb-3 text-success"></i>
+                        <h3 class="h5 card-title">Backend</h3>
+                        <p class="card-text">Разработка серверной логики для веб-приложений с обеспечением максимальной производительности и безопасности</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fullstack -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-info">
+                    <div class="card-body text-center">
+                        <i class="fas fa-code fa-3x mb-3 text-info"></i>
+                        <h3 class="h5 card-title">Fullstack</h3>
+                        <p class="card-text">Создание полноценных веб-приложений от пользовательского интерфейса до серверной логики</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEO -->
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-warning">
+                    <div class="card-body text-center">
+                        <i class="fas fa-search fa-3x mb-3 text-warning"></i>
+                        <h3 class="h5 card-title">SEO</h3>
+                        <p class="card-text">Оптимизация сайтов для поисковых систем с целью улучшения позиций в выдаче</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Призыв к действию -->
+<section class="text-center mb-5 p-4 text-white rounded-3 shadow" style="background-color: #2c3e50;">
+    <a href="{{ SITEURL }}/projects" class="btn btn-outline-light btn-lg px-4 py-2">
+        <i class="fas fa-code me-2"></i>Перейти к проектам
+    </a>
+</section>
+</div>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container contact-page mt-5">
+    <div class="row">
+        <!-- Основной блок контактов -->
+        <div class="col-lg-6">
+            <h1 class="mb-4">Свяжитесь со мной</h1>
+            
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h2 class="h4"><i class="fas fa-envelope me-2"></i>Почта</h2>
+                    <p>
+                        <a href="mailto:lara.dyrdina.dev@yandex.ru" class="text-decoration-none">
+                            lara.dyrdina.dev@yandex.ru
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h2 class="h4"><i class="fab fa-github me-2"></i>GitHub</h2>
+                    <p>
+                        <a href="https://github.com/Aw-Sea" target="_blank" class="text-decoration-none">
+                            github.com/Aw-Sea
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="h4"><i class="fab fa-telegram me-2"></i>Telegram</h2>
+                    <p>
+                        <a href="https://t.me/Aw-Sea" target="_blank" class="text-decoration-none">
+                            @Aw-Sea
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Форма обратной связи -->
+        <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="h4 mb-4"><i class="fas fa-paper-plane me-2"></i>Форма обратной связи</h2>
+                    
+                    <form id="contactForm" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Ваше имя</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Сообщение</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-paper-plane me-2"></i>Отправить
+                        </button>
+                    </form>
+                    
+                    <div id="formSuccess" class="alert alert-success mt-3 d-none">
+                        Сообщение отправлено! Я свяжусь с вами в ближайшее время.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

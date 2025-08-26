@@ -1,0 +1,352 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container projects-page mt-5">
+    <h1 class="text-center mb-5">{{ page.title }}</h1>
+
+    <!-- Фильтры и сортировка -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-outline-primary active" data-filter="all">Все проекты</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="django">Django</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="javascript">JavaScript</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="fullstack">FullStack</button>
+            </div>
+        </div>
+        <div class="col-md-4 text-end">
+            <select class="form-select" id="sort-projects">
+                <option value="newest">Сначала новые</option>
+                <option value="oldest">Сначала старые</option>
+                <option value="name">По названию</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Сетка проектов -->
+    <div class="row" id="projects-grid">
+        <!-- Проект 1 -->
+        <div class="col-lg-6 mb-4" data-category="django fullstack" data-date="2024-01">
+            <div class="card project-card h-100 shadow-sm">
+                <img src="{{ SITEURL }}/images/travel-blog.png" class="card-img-top" alt="Блог для путешественников">
+                <div class="card-body">
+                    <h3 class="h5 card-title">Блог для путешественников</h3>
+                    <p class="card-text">Платформа для публикации маршрутов с геолокацией и совместного планирования поездок.</p>
+
+                    <div class="mb-3">
+                        <span class="badge bg-primary me-1">Django</span>
+                        <span class="badge bg-primary me-1">PostgreSQL</span>
+                        <span class="badge bg-primary me-1">Leaflet.js</span>
+                    </div>
+
+                    <div class="project-links">
+                        <button class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                            <i class="fas fa-eye me-1"></i> Подробнее
+                        </button>
+                        <a href="https://github.com/..." class="btn btn-outline-dark btn-sm me-2">
+                            <i class="fab fa-github me-1"></i> Код
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Проект 2 -->
+        <div class="col-lg-6 mb-4" data-category="fullstack" data-date="2024-01">
+            <div class="card project-card h-100 shadow-sm">
+                <img src="{{ SITEURL }}/images/zhit-pomnit.png" class="card-img-top" alt="Патриотический сайт">
+                <div class="card-body">
+                    <h3 class="h5 card-title">Патриотический сайт</h3>
+                    <p class="card-text">Сайт памяти героев Пензенской области</p>
+
+                    <div class="mb-3">
+                        <span class="badge bg-primary me-1">Grav</span>
+                        <span class="badge bg-primary me-1">PHP</span>
+                    </div>
+
+                    <div class="project-links">
+                        <button class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                            <i class="fas fa-eye me-1"></i> Подробнее
+                        </button>
+                        <a href="https://github.com/..." class="btn btn-outline-dark btn-sm me-2">
+                            <i class="fab fa-github me-1"></i> Код
+                        </a>
+                        <a href="https://житьпомнитьзнать.рф/ru" class="btn btn-outline-success btn-sm">
+                            <i class="fas fa-external-link-alt me-1"></i> Ссылка на сайт
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- Проект 3 -->
+        <div class="col-lg-6 mb-4" data-category="fullstack" data-date="2024-01">
+            <div class="card project-card h-100 shadow-sm">
+                <img src="{{ SITEURL }}/images/pelican-portfolio.png" class="card-img-top" alt="Портфолио на Pelican">
+                <div class="card-body">
+                    <h3 class="h5 card-title">Портфолио на Pelican</h3>
+                    <p class="card-text">Статический сайт для презентации работ</p>
+
+                    <div class="mb-3">
+                        <span class="badge bg-primary me-1">Pelican</span>
+                        <span class="badge bg-primary me-1">Markdown</span>
+                        <span class="badge bg-primary me-1">GitHub Pages</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="https://github.com/..." class="btn btn-outline-dark btn-sm me-2">
+                            <i class="fab fa-github me-1"></i> Код
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Проект 2 (шаблон для добавления) -->
+        <div class="col-lg-6 mb-4" data-category="javascript" data-date="2023-11">
+            <div class="card project-card h-100 shadow-sm">
+                <div class="card-img-top bg-dark text-white text-center py-5">
+                    <i class="fas fa-plus fa-3x"></i>
+                </div>
+                <div class="card-body text-center">
+                    <h3 class="h5 card-title">Новый проект</h3>
+                    <p class="card-text">Скоро здесь появится описание нового проекта</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Модальное окно для проекта 1 -->
+<div class="modal fade" id="projectModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Блог для путешественников</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Галерея скриншотов -->
+                <div class="mb-4">
+                    <div id="projectCarousel1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ SITEURL }}/images/travel-blog-01.png" class="d-block w-100" alt="Главная страница">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ SITEURL }}/images/travel-blog-02.png" class="d-block w-100" alt="Создание маршрута">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ SITEURL }}/images/travel-blog-03.png" class="d-block w-100" alt="Создание маршрута">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ SITEURL }}/images/travel-blog-04.png" class="d-block w-100" alt="Создание маршрута">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ SITEURL }}/images/travel-blog-05.png" class="d-block w-100" alt="Создание маршрута">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel1" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon bg-dark rounded"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel1" data-bs-slide="next">
+                            <span class="carousel-control-next-icon bg-dark rounded"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Детальное описание -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>О проекте</h4>
+                        <p>Полнофункциональная платформа для путешественников с возможностью создания маршрутов, добавления точек интереса и совместного планирования поездок.</p>
+
+                        <h5 class="mt-4">Функционал:</h5>
+                        <ul>
+                            <li>Создание и редактирование маршрутов</li>
+                            <li>Интерактивная карта с геолокацией</li>
+                            <li>Система комментариев и оценок</li>
+                            <li>Экспорт маршрутов в GPX формат</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Технологии</h5>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-primary">Django 4.2</span>
+                                    <span class="badge bg-primary">PostgreSQL</span>
+                                    <span class="badge bg-primary">Leaflet.js</span>
+                                    <span class="badge bg-primary">Bootstrap 5</span>
+                                </div>
+
+                                <h5>Ссылки</h5>
+                                <div class="d-grid gap-2">
+                                    <a href="https://github.com/..." class="btn btn-outline-dark">
+                                        <i class="fab fa-github me-1"></i> Исходный код
+                                    </a>
+                                    <a href="https://travel-blog.example.com" class="btn btn-outline-success">
+                                        <i class="fas fa-external-link-alt me-1"></i> Живое демо
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для проекта 2 -->
+<div class="modal fade" id="projectModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Патриотический сайт</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Галерея скриншотов -->
+                <div class="mb-4">
+                    <div id="projectCarousel2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ SITEURL }}/images/zhit-pomnit-01.png" class="d-block w-100" alt="Главная страница">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ SITEURL }}/images/zhit-pomnit-02.png" class="d-block w-100" alt="Создание маршрута">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ SITEURL }}/images/zhit-pomnit-03.png" class="d-block w-100" alt="Создание маршрута">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{{ SITEURL }}/images/zhit-pomnit-04.png" class="d-block w-100" alt="Создание маршрута">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon bg-dark rounded"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon bg-dark rounded"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Детальное описание -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>О проекте</h4>
+                        <p>Историко-патриотический портал для краеведческого проекта с акцентом на простоту управления контентом и современный дизайн.</p>
+
+                        <h5 class="mt-4">Реализованный функционал:</h5>
+                        <ul>
+                            <li>Лента новостей и анонсов патриотических событий региона</li>
+                            <li>Интерактивный каталог памятных мест с фотогалереями</li>
+                            <li>Раздел с видеорепортажами и историческими хрониками</li>
+                            <li>Адаптивный дизайн для всех устройств</li>
+                        </ul>
+
+                        <h5 class="mt-4">Мои задачи:</h5>
+                        <ul>
+                            <li>Выбор и настройка CMS Grav для удобства управления</li>
+                            <li>Кастомизация дизайна и интеграция медиа-функционала</li>
+                            <li>Настройка интуитивно понятной админ-панели для заказчика</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5>Технологии</h5>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-primary">Grav CMS</span>
+                                    <span class="badge bg-primary">PHP</span>
+                                    <span class="badge bg-primary">Markdown</span>
+                                    <span class="badge bg-primary">HTML5</span>
+                                    <span class="badge bg-primary">CSS3</span>
+                                    <span class="badge bg-primary">JavaScript</span>
+                                </div>
+
+                                <h5>Ссылки</h5>
+                                <div class="d-grid gap-2">
+                                    <a href="https://github.com/..." class="btn btn-outline-dark">
+                                        <i class="fab fa-github me-1"></i> Исходный код
+                                    </a>
+                                    <a href="https://житьпомнитьзнать.рф/ru" class="btn btn-outline-success">
+                                        <i class="fas fa-external-link-alt me-1"></i> Ссылка на сайт
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<style>
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.carousel-item img {
+    max-height: 400px;
+    object-fit: contain;
+}
+</style>
+
+<script>
+// Фильтрация проектов
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const projects = document.querySelectorAll('.col-lg-6');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            projects.forEach(project => {
+                if (filter === 'all' || project.getAttribute('data-category').includes(filter)) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Сортировка
+    const sortSelect = document.getElementById('sort-projects');
+    sortSelect.addEventListener('change', () => {
+        const sortValue = sortSelect.value;
+        const grid = document.getElementById('projects-grid');
+        const projectsArray = Array.from(projects);
+
+        projectsArray.sort((a, b) => {
+            switch(sortValue) {
+                case 'newest':
+                    return b.getAttribute('data-date').localeCompare(a.getAttribute('data-date'));
+                case 'oldest':
+                    return a.getAttribute('data-date').localeCompare(b.getAttribute('data-date'));
+                case 'name':
+                    return a.querySelector('.card-title').textContent.localeCompare(b.querySelector('.card-title').textContent);
+            }
+        });
+
+        projectsArray.forEach(project => grid.appendChild(project));
+    });
+});
+</script>
+{% endblock %}

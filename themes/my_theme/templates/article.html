@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Заголовок и метаданные -->
+            <header class="mb-5 p-4 rounded-3" style="background-color: #2c3e50;"> <!-- Добавлен padding и темный фон -->
+                {% if article.category %}
+                <div class="mb-3">  <!-- Увеличен отступ -->
+                    <span class="badge bg-primary fs-6">
+                        <a href="{{ SITEURL }}/{{ article.category.url }}" class="text-light text-decoration-none">
+                               {{ article.category }}
+                        </a>
+                    </span>
+                </div>
+                {% endif %}
+
+                <h1 class="display-5 fw-bold mb-4 text-white">{{ article.title }}</h1>  <!-- Увеличен отступ -->
+
+
+                {% if article.tags %}
+                <div class="mb-3">
+                    {% for tag in article.tags %}
+                    <a href="{{ SITEURL }}/{{ tag.url }}"  class="badge bg-light text-dark text-decoration-none me-2 border">
+                        #{{ tag }}
+                    </a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if article.cover_image %}
+                <img src="{{ SITEURL }}/{{ article.cover_image }}" class="img-fluid rounded mb-4 shadow-sm" alt="{{ article.title }}">
+                {% endif %}
+            </header>
+
+            <!-- Содержание статьи -->
+            <div class="article-content fs-5 lh-base text-dark" style="text-align: justify; hyphens: auto;">
+                {{ article.content }}
+            </div>
+
+            <!-- Навигация между статьями -->
+            <nav class="mt-5 pt-4 border-top">
+                <div class="row">
+                    {% if article.prev_article %}
+                    <div class="col-6">
+                        <span class="text-body-secondary small">Предыдущая</span>
+                        <br>
+                        <a href="{{ SITEURL }}/{{ article.prev_article.url }}" class="text-decoration-none text-dark">
+                            ← {{ article.prev_article.title }}
+                        </a>
+                    </div>
+                    {% endif %}
+
+                    {% if article.next_article %}
+                    <div class="col-6 text-end">
+                        <span class="text-body-secondary small">Следующая</span>
+                        <br>
+                        <a href="{{ SITEURL }}/{{ article.next_article.url }}" class="text-decoration-none text-dark">
+                            {{ article.next_article.title }} →
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </nav>
+
+            <!-- Кнопка возврата к списку статей -->
+            <div class="mt-4">
+                <a href="{{ SITEURL }}/blog/" class="btn btn-outline-dark">
+                    <i class="fas fa-arrow-left me-2"></i>Все статьи
+                </a>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- Lightbox стили -->
+<style>
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    border: 3px solid white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.lightbox-caption {
+    color: white;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    color: white;
+    font-size: 35px;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lightbox-close:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .lightbox-close {
+        top: -50px;
+        right: 10px;
+        font-size: 30px;
+    }
+
+    .lightbox-caption {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+}
+
+    .float-left {
+    float: left;
+    margin: 0 20px 15px 0;
+    max-width: 300px;
+    shape-outside: margin-box;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 15px 20px;
+    max-width: 300px;
+    shape-outside: margin-box;
+}
+</style>
+
+<!-- Lightbox контейнер -->
+<div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+        <img class="lightbox-img" src="" alt="">
+        <div class="lightbox-caption"></div>
+        <div class="lightbox-close" onclick="closeLightbox()">×</div>
+    </div>
+</div>
+
+<script>
+// Lightbox функционал
+function openLightbox(imgSrc, caption) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('.lightbox-img');
+    const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+
+    lightboxImg.src = imgSrc;
+    lightboxCaption.textContent = caption || '';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Блокируем прокрутку
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+    document.body.style.overflow = ''; // Возвращаем прокрутку
+}
+
+// Закрытие по клику на фон
+document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeLightbox();
+    }
+});
+
+// Закрытие по ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});
+
+// Инициализация для всех изображений
+document.addEventListener('DOMContentLoaded', function() {
+    const imageLinks = document.querySelectorAll('.image-lightbox');
+
+    imageLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const img = this.querySelector('img');
+            const caption = img.alt || this.closest('figure').querySelector('figcaption')?.textContent || '';
+            openLightbox(this.href, caption);
+        });
+    });
+});
+</script>
+{% endblock %}
