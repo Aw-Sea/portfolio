@@ -32,3 +32,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}  # Оставьте этот токен!
         publish_dir: ./output
+        keep_files: false
+        force_orphan: true
