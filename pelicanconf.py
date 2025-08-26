@@ -3,10 +3,11 @@
 # ====================
 AUTHOR = 'admin'
 SITENAME = 'Портфолио'
-SITEURL = ""  # Для разработки оставить пустым, для продакшена указать домен
+SITEURL = 'https://aw-sea.github.io/portfolio'
 PATH = "content"  # Корневая папка с контентом
 TIMEZONE = 'Europe/Moscow'
 DEFAULT_LANG = 'ru'
+RELATIVE_URLS = False
 
 # ====================
 # Настройки тем и путей
