@@ -3,11 +3,10 @@
 # ====================
 AUTHOR = 'admin'
 SITENAME = 'Портфолио'
-SITEURL = 'https://aw-sea.github.io/portfolio'
+SITEURL = ""
 PATH = "content"  # Корневая папка с контентом
 TIMEZONE = 'Europe/Moscow'
 DEFAULT_LANG = 'ru'
-RELATIVE_URLS = False
 
 # ====================
 # Настройки тем и путей
