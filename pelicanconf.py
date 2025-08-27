@@ -16,8 +16,12 @@ THEME = 'themes/my_theme'
 # Пути к контенту
 ARTICLE_PATHS = ['articles']  # Статьи блога (убрал 'content', так как это дублирование)
 PAGE_PATHS = ['pages']       # Отдельные страницы
-STATIC_PATHS = ['images', 'static', 'pdfs']  # Статические файлы (картинки, CSS/JS)
-
+STATIC_PATHS = ['images', 'static', 'pdfs', 'extra']  # Статические файлы (картинки, CSS/JS)
+EXTRA_PATH_METADATA = {
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/favicon-16x16.png': {'path': 'favicon-16x16.png'},
+    'extra/favicon-32x32.png': {'path': 'favicon-32x32.png'}
+}
 # ====================
 # Настройки URL
 # ====================
