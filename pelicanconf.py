@@ -20,7 +20,8 @@ STATIC_PATHS = ['images', 'static', 'pdfs', 'extra']  # Статические �
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
     'extra/favicon-16x16.png': {'path': 'favicon-16x16.png'},
-    'extra/favicon-32x32.png': {'path': 'favicon-32x32.png'}
+    'extra/favicon-32x32.png': {'path': 'favicon-32x32.png'},
+    'extra/apple-touch-icon.png': {'path': 'apple-touch-icon.png'}
 }
 # ====================
 # Настройки URL
