@@ -30,8 +30,8 @@
             <div class="card project-card h-100 shadow-sm">
                 <img src="{{ SITEURL }}/images/travel-blog.png" class="card-img-top" alt="Блог для путешественников">
                 <div class="card-body">
-                    <h3 class="h5 card-title">Блог для путешественников</h3>
-                    <p class="card-text">Платформа для публикации маршрутов с геолокацией и совместного планирования поездок.</p>
+                    <h3 class="h5 card-title">Traveler — сообщество путешественников</h3>
+                    <p class="card-text">Дипломный проект: полнофункциональная платформа для блогеров-путешественников с системой рекомендаций и социальными функциями.</p>
 
                     <div class="mb-3">
                         <span class="badge bg-primary me-1">Django</span>
@@ -43,7 +43,7 @@
                         <button class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#projectModal1">
                             <i class="fas fa-eye me-1"></i> Подробнее
                         </button>
-                        <a href="https://github.com/..." class="btn btn-outline-dark btn-sm me-2">
+                        <a href="https://github.com/Aw-Sea/travel" class="btn btn-outline-dark btn-sm me-2">
                             <i class="fab fa-github me-1"></i> Код
                         </a>
                     </div>
@@ -68,7 +68,7 @@
                         <button class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#projectModal2">
                             <i class="fas fa-eye me-1"></i> Подробнее
                         </button>
-                        <a href="https://github.com/..." class="btn btn-outline-dark btn-sm me-2">
+                        <a href="https://github.com/Aw-Sea/patriot" class="btn btn-outline-dark btn-sm me-2">
                             <i class="fab fa-github me-1"></i> Код
                         </a>
                         <a href="https://житьпомнитьзнать.рф/ru" class="btn btn-outline-success btn-sm">
@@ -122,7 +122,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">Блог для путешественников</h2>
+                <h2 class="modal-title">Traveler — сообщество путешественников</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
@@ -156,44 +156,63 @@
                 </div>
 
                 <!-- Детальное описание -->
-                <div class="row">
-                    <div class="col-md-8">
-                        <h4>О проекте</h4>
-                        <p>Полнофункциональная платформа для путешественников с возможностью создания маршрутов, добавления точек интереса и совместного планирования поездок.</p>
+<div class="row">
+    <div class="col-md-8">
+        <h4>О проекте</h4>
+        <p>Дипломный проект: полнофункциональная платформа для блогеров-путешественников с системой рекомендаций и социальными функциями.</p>
 
-                        <h5 class="mt-4">Функционал:</h5>
-                        <ul>
-                            <li>Создание и редактирование маршрутов</li>
-                            <li>Интерактивная карта с геолокацией</li>
-                            <li>Система комментариев и оценок</li>
-                            <li>Экспорт маршрутов в GPX формат</li>
-                        </ul>
-                    </div>
+        <h5 class="mt-4">Ключевые возможности:</h5>
+        <ul class="list-unstyled">
+            <li>✅ <strong>Публикация постов</strong> с Rich-редактором (Froala Editor)</li>
+            <li>✅ <strong>Лента подписок</strong> и персонализированные рекомендации</li>
+            <li>✅ <strong>Социальные функции:</strong> лайки, комментарии, закладки</li>
+            <li>✅ <strong>Система сообщений</strong> и уведомлений</li>
+            <li>✅ <strong>Поиск и фильтрация</strong> по категориям</li>
+            <li>✅ <strong>Смена темы</strong> (темная/светлая)</li>
+            <li>✅ <strong>Адаптивный дизайн</strong> на Bootstrap</li>
+        </ul>
 
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5>Технологии</h5>
-                                <div class="d-flex flex-wrap gap-2 mb-3">
-                                    <span class="badge bg-primary">Django 4.2</span>
-                                    <span class="badge bg-primary">PostgreSQL</span>
-                                    <span class="badge bg-primary">Leaflet.js</span>
-                                    <span class="badge bg-primary">Bootstrap 5</span>
-                                </div>
+        <h5 class="mt-4">Технические особенности:</h5>
+        <ul>
+            <li>Система рекомендаций на основе активности пользователей</li>
+            <li>Модель UserActivity для анализа поведения</li>
+            <li>Админ-панель для модерации контента</li>
+            <li>Оптимизированные запросы к базе данных</li>
+        </ul>
+    </div>
 
-                                <h5>Ссылки</h5>
-                                <div class="d-grid gap-2">
-                                    <a href="https://github.com/..." class="btn btn-outline-dark">
-                                        <i class="fab fa-github me-1"></i> Исходный код
-                                    </a>
-                                    <a href="https://travel-blog.example.com" class="btn btn-outline-success">
-                                        <i class="fas fa-external-link-alt me-1"></i> Живое демо
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5>Технологии</h5>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                    <span class="badge bg-primary">Django 4.2</span>
+                    <span class="badge bg-primary">PostgreSQL</span>
+                    <span class="badge bg-primary">Bootstrap 5</span>
+                    <span class="badge bg-primary">Froala Editor</span>
+                    <span class="badge bg-primary">JavaScript</span>
                 </div>
+
+                <h5>Статистика</h5>
+                <div class="small">
+                    <div>≈ 15 основных моделей данных</div>
+                    <div>Система рекомендаций</div>
+                    <div>Адаптивный UI</div>
+                </div>
+
+                <h5 class="mt-3">Ссылки</h5>
+                <div class="d-grid gap-2">
+                    <a href="https://github.com/Aw-Sea/travel" class="btn btn-outline-dark btn-sm">
+                        <i class="fab fa-github me-1"></i> Исходный код
+                    </a>
+                    <a href="/blog/kak-ia-sozdala-diplomnyi-proekt-na-django-platforma-dlia-turisticheskikh-blogov/" class="btn btn-outline-primary btn-sm">
+                        <i class="fas fa-file-alt me-1"></i> Детальное описание
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </div>
@@ -271,7 +290,7 @@
 
                                 <h5>Ссылки</h5>
                                 <div class="d-grid gap-2">
-                                    <a href="https://github.com/..." class="btn btn-outline-dark">
+                                    <a href="https://github.com/Aw-Sea/patriot" class="btn btn-outline-dark">
                                         <i class="fab fa-github me-1"></i> Исходный код
                                     </a>
                                     <a href="https://житьпомнитьзнать.рф/ru" class="btn btn-outline-success">
