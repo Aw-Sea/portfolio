@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=103919434', 'ym');
+
+    ym(103919434, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/103919434" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Подключение Bootstrap и стиля -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome для иконок -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://aw-sea.github.io/portfolio/theme/css/main.css" rel="stylesheet">
+
+    <!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://aw-sea.github.io/portfolio/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://aw-sea.github.io/portfolio/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://aw-sea.github.io/portfolio/favicon-16x16.png">
+<link rel="manifest" href="https://aw-sea.github.io/portfolio/site.webmanifest">
+<link rel="mask-icon" href="https://aw-sea.github.io/portfolio/favicon.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Meta tags -->
+<meta property="og:title" content="Как я создала дипломный проект на Django: платформа для туристических блогов">
+
+<meta property="og:site_name" content="Портфолио">
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="https://aw-sea.github.io/portfolio/blog/kak-ia-sozdala-diplomnyi-proekt-na-django-platforma-dlia-turisticheskikh-blogov/">
+
+<title>
+        Как я создала дипломный проект на Django: платформа для туристических блогов — Портфолио
+</title>
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a href="https://aw-sea.github.io/portfolio" class="navbar-brand d-flex align-items-center">
+                <span class="fs-4">Портфолио</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="https://aw-sea.github.io/portfolio/"
+                           class="nav-link
+">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://aw-sea.github.io/portfolio/about/"
+                           class="nav-link
+">
+                            Обо мне
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://aw-sea.github.io/portfolio/resume/"
+                           class="nav-link
+">
+                            Резюме
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://aw-sea.github.io/portfolio/blog/"
+                           class="nav-link
+active">
+                            Блог
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://aw-sea.github.io/portfolio/projects/"
+                           class="nav-link
+">
+                            Проекты
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://aw-sea.github.io/portfolio/contacts/"
+                           class="nav-link
+">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="container my-4">
+        <div class="content-wrapper">
+<article class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Заголовок и метаданные -->
+            <header class="mb-5 p-4 rounded-3" style="background-color: #2c3e50;"> <!-- Добавлен padding и темный фон -->
+                <div class="mb-3">  <!-- Увеличен отступ -->
+                    <span class="badge bg-primary fs-6">
+                        <a href="https://aw-sea.github.io/portfolio/category/proekty/" class="text-light text-decoration-none">
+                               Проекты
+                        </a>
+                    </span>
+                </div>
+
+                <h1 class="display-5 fw-bold mb-4 text-white">Как я создала дипломный проект на Django: платформа для туристических блогов</h1>  <!-- Увеличен отступ -->
+
+
+                <div class="mb-3">
+                    <a href="https://aw-sea.github.io/portfolio/tag/python.html"  class="badge bg-light text-dark text-decoration-none me-2 border">
+                        #python
+                    </a>
+                    <a href="https://aw-sea.github.io/portfolio/tag/django.html"  class="badge bg-light text-dark text-decoration-none me-2 border">
+                        #django
+                    </a>
+                    <a href="https://aw-sea.github.io/portfolio/tag/veb-razrabotka.html"  class="badge bg-light text-dark text-decoration-none me-2 border">
+                        #веб-разработка
+                    </a>
+                    <a href="https://aw-sea.github.io/portfolio/tag/diplomnyi-proekt.html"  class="badge bg-light text-dark text-decoration-none me-2 border">
+                        #дипломный проект
+                    </a>
+                </div>
+
+            </header>
+
+            <!-- Содержание статьи -->
+            <div class="article-content fs-5 lh-base text-dark" style="text-align: justify; hyphens: auto;">
+                <h1>Как я создала дипломный проект на Django: платформа для туристических блогов</h1>
+<h2>Выбор темы и концепция</h2>
+<p>Обучаясь на курсе веб-разработки, я выбрала тему дипломного проекта — «Проектирование платформы для создания и продвижения туристических блогов». Назвала ее «Traveler. Сообщество увлеченных путешествиями людей».</p>
+<p>Передо мной стояли серьезные задачи: формирование концепции и функциональных требований к платформе, проектирование пользовательского интерфейса и разработка стратегии продвижения блогов. Это был вызов, но именно то, что мне всегда хотелось сделать — создать что-то масштабное и полезное.</p>
+<h2>Почему именно туристическая тема?</h2>
+<p>В последние годы наблюдается значительный рост интереса к путешествиям и онлайн-туризму. По данным исследований, количество туристических блогов и онлайн-публикаций о путешествиях неуклонно растет. Поэтому появилась необходимость в создании удобных платформ для пользователей, где они могли бы не только делиться впечатлениями, но и находить единомышленников.</p>
+<figure class="article-image image-small float-left">
+    <a href="https://aw-sea.github.io/portfolio/blog/kak-ia-sozdala-diplomnyi-proekt-na-django-platforma-dlia-turisticheskikh-blogov/images/lenta.png" data-lightbox="gallery" data-title="Описание" class="image-lightbox">
+        <img class="image-framed image-small" src="https://aw-sea.github.io/portfolio/blog/kak-ia-sozdala-diplomnyi-proekt-na-django-platforma-dlia-turisticheskikh-blogov/images/lenta.png" alt="Описание" width="600">
+    </a>
+    <figcaption>Нажмите для увеличения</figcaption>
+</figure>
+<h2>Значимость проекта</h2>
+<p>Платформа объединяет туристов, путешественников и блогеров в одном пространстве. Пользователи получают удобные инструменты для создания качественного контента, а туристическая индустрия — новый канал привлечения клиентов. Создается благоприятная среда для обмена опытом и информацией между путешественниками.</p>
+<h2>Целевая аудитория</h2>
+<p>Проект ориентирован на широкую аудиторию:
+ - Туристы и путешественники, которые хотят делиться своими впечатлениями
+ - Блогеры, специализирующиеся на тематике путешествий
+ - Предприниматели и владельцы туристических компаний
+ - Любители онлайн-туризма и поиска информации о путешествиях</p>
+<h2>Дизайн и визуальная часть</h2>
+<p>Дизайн создавался на основе Bootstrap в темно-синей и белой цветовой гамме. Я реализовала функцию смены темы — со светлой на темную и обратно. Выбранная тема сохраняется, что удобно для пользователей.</p>
+<p>На главной странице размещены блоки, которые могли бы заинтересовать гостей сайта: подсчитывается количество постов за месяц, выводятся профили пользователей, случайные посты и популярные категории.</p>
+<p><img alt="Описание" class="article-image" src="https://aw-sea.github.io/portfolio/blog/kak-ia-sozdala-diplomnyi-proekt-na-django-platforma-dlia-turisticheskikh-blogov/images/activ.png"></p>
+<h2>Ключевые функции платформы</h2>
+<p>Пользователи могут публиковать посты, редактировать и удалять их. </p>
+<figure class="article-image image-small float-left">
+    <a href="https://aw-sea.github.io/portfolio/blog/kak-ia-sozdala-diplomnyi-proekt-na-django-platforma-dlia-turisticheskikh-blogov/images/Froala.png" data-lightbox="gallery" data-title="Описание" class="image-lightbox">
+        <img class="image-framed image-small" src="https://aw-sea.github.io/portfolio/blog/kak-ia-sozdala-diplomnyi-proekt-na-django-platforma-dlia-turisticheskikh-blogov/images/Froala.png" alt="Описание" width="600">
+    </a>
+    <figcaption>Нажмите для увеличения</figcaption>
+</figure>
+
+<p>Для удобства редактирования я использовала библиотеку Froala Editor — она позволяет форматировать текст, добавлять изображения и видео из других ресурсов.</p>
+<p>Реализована лента подписок — можно просматривать посты людей, на которых подписан. Для удобства навигации добавлены поиск и фильтр по категориям.</p>
+<p>Социальные функции включают комментирование чужих постов, возможность ставить лайки и добавлять посты в закладки.</p>
+<h2>Персонализация и взаимодействие</h2>
+<p>Система рекомендаций анализирует активность пользователя (просмотры, лайки, комментарии) через модель UserActivity и предлагает релевантный контент.</p>
+<p>Пользователи могут редактировать профили — изменять и добавлять информацию о себе. Реализована система личных сообщений с возможностью просмотра входящих и отправленных писем.</p>
+<figure class="article-image image-small float-left">
+    <a href="https://aw-sea.github.io/portfolio/blog/kak-ia-sozdala-diplomnyi-proekt-na-django-platforma-dlia-turisticheskikh-blogov/images/soo.png" data-lightbox="gallery" data-title="Описание" class="image-lightbox">
+        <img class="image-framed image-small" src="https://aw-sea.github.io/portfolio/blog/kak-ia-sozdala-diplomnyi-proekt-na-django-platforma-dlia-turisticheskikh-blogov/images/soo.png" alt="Описание" width="600">
+    </a>
+    <figcaption>Нажмите для увеличения</figcaption>
+</figure>
+<h2>Уведомления и обратная связь</h2>
+<p>Функция уведомлений включает счетчик, который показывает количество непрочитанных сообщений и обновляется после прочтения. Также пользователи могут обращаться с проблемами и вопросами по работе сайта к администраторам.</p>
+<h2>Результаты разработки</h2>
+<p>Мне удалось успешно разработать и реализовать основную функциональность веб-приложения:</p>
+<ul>
+<li>Система регистрации и авторизации пользователей </li>
+<li>Управление профилями</li>
+<li>Создание и редактирование постов</li>
+<li>Система комментариев и лайков</li>
+</ul>
+<p>Особой гордостью стала интеграция рекомендательной системы, которая анализирует активность пользователей и предлагает релевантные посты на основе их интересов и просмотров.</p>
+<h2>Планы на будущее</h2>
+<p>Если я решу полностью реализовать этот проект и выпустить его в «мир», то первые улучшения будут такими:</p>
+<p><strong>Улучшение рекомендательной системы</strong> через применение более сложных алгоритмов машинного обучения для повышения точности рекомендаций. Возможно использование внешних сервисов или библиотек для создания более персонализированных рекомендаций.</p>
+<p><strong>Оптимизация мобильной версии</strong> — разработка и адаптация приложения для обеспечения удобства использования на мобильных устройствах.</p>
+<p>Этот проект стал для меня не просто дипломной работой, а настоящим прорывом в понимании того, как создаются сложные веб-приложения. Каждая строчка кода, каждая реализованная функция приближали меня к цели — созданию платформы, которая действительно может быть полезной людям.</p>
+            </div>
+
+            <!-- Навигация между статьями -->
+            <nav class="mt-5 pt-4 border-top">
+                <div class="row">
+
+                </div>
+            </nav>
+
+            <!-- Кнопка возврата к списку статей -->
+            <div class="mt-4">
+                <a href="https://aw-sea.github.io/portfolio/blog/" class="btn btn-outline-dark">
+                    <i class="fas fa-arrow-left me-2"></i>Все статьи
+                </a>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- Lightbox стили -->
+<style>
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    border: 3px solid white;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.lightbox-caption {
+    color: white;
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    color: white;
+    font-size: 35px;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lightbox-close:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .lightbox-close {
+        top: -50px;
+        right: 10px;
+        font-size: 30px;
+    }
+
+    .lightbox-caption {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+}
+
+    .float-left {
+    float: left;
+    margin: 0 20px 15px 0;
+    max-width: 300px;
+    shape-outside: margin-box;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 15px 20px;
+    max-width: 300px;
+    shape-outside: margin-box;
+}
+</style>
+
+<!-- Lightbox контейнер -->
+<div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+        <img class="lightbox-img" src="" alt="">
+        <div class="lightbox-caption"></div>
+        <div class="lightbox-close" onclick="closeLightbox()">×</div>
+    </div>
+</div>
+
+<script>
+// Lightbox функционал
+function openLightbox(imgSrc, caption) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('.lightbox-img');
+    const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+
+    lightboxImg.src = imgSrc;
+    lightboxCaption.textContent = caption || '';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Блокируем прокрутку
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+    document.body.style.overflow = ''; // Возвращаем прокрутку
+}
+
+// Закрытие по клику на фон
+document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeLightbox();
+    }
+});
+
+// Закрытие по ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeLightbox();
+    }
+});
+
+// Инициализация для всех изображений
+document.addEventListener('DOMContentLoaded', function() {
+    const imageLinks = document.querySelectorAll('.image-lightbox');
+
+    imageLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const img = this.querySelector('img');
+            const caption = img.alt || this.closest('figure').querySelector('figcaption')?.textContent || '';
+            openLightbox(this.href, caption);
+        });
+    });
+});
+</script>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">©  admin. Все права защищены.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav justify-content-center justify-content-md-end">
+                        <li class="nav-item"><a href="https://aw-sea.github.io/portfolio/" class="nav-link px-2">Главная</a></li>
+                        <li class="nav-item"><a href="https://aw-sea.github.io/portfolio/blog/" class="nav-link px-2">Блог</a></li>
+                        <li class="nav-item"><a href="https://aw-sea.github.io/portfolio/contacts/" class="nav-link px-2">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Yandex.Metrika counter -->
+<noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

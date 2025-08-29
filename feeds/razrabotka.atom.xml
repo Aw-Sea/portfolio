@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Портфолио - Разработка</title><link href="https://aw-sea.github.io/portfolio/" rel="alternate"/><link href="https://aw-sea.github.io/portfolio/feeds/razrabotka.atom.xml" rel="self"/><id>https://aw-sea.github.io/portfolio/</id><updated>2025-08-23T00:00:00+03:00</updated><entry><title>Почему я выбрала Pelican для своего портфолио</title><link href="https://aw-sea.github.io/portfolio/blog/pochemu-ia-vybrala-pelican-dlia-svoego-portfolio/" rel="alternate"/><published>2025-08-23T00:00:00+03:00</published><updated>2025-08-23T00:00:00+03:00</updated><author><name>admin</name></author><id>tag:aw-sea.github.io,2025-08-23:/portfolio/blog/pochemu-ia-vybrala-pelican-dlia-svoego-portfolio/</id><summary type="html">&lt;h1&gt;Почему я выбрала Pelican для своего портфолио&lt;/h1&gt;
+&lt;p&gt;В &lt;a href="/blog/vybor-grav-cms-dlia-patrioticheskogo-saita-ot-idei-do-realizatsii"&gt;прошлой статье&lt;/a&gt; о выборе Grav CMS я рассказывала про свое знакомство с генераторами статичных сайтов. Когда пришло время создавать собственное портфолио, я сознательно вернулась к Pelican, который изначально показался мне самым удобным и логичным инструментом.&lt;/p&gt;
+&lt;h2&gt;Простота и полный контроль&lt;/h2&gt;
+&lt;p&gt;Мне полностью хватает …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Почему я выбрала Pelican для своего портфолио&lt;/h1&gt;
+&lt;p&gt;В &lt;a href="/blog/vybor-grav-cms-dlia-patrioticheskogo-saita-ot-idei-do-realizatsii"&gt;прошлой статье&lt;/a&gt; о выборе Grav CMS я рассказывала про свое знакомство с генераторами статичных сайтов. Когда пришло время создавать собственное портфолио, я сознательно вернулась к Pelican, который изначально показался мне самым удобным и логичным инструментом.&lt;/p&gt;
+&lt;h2&gt;Простота и полный контроль&lt;/h2&gt;
+&lt;p&gt;Мне полностью хватает функционала Pelican, а админ-панель просто не требуется — я предпочитаю обновлять информацию напрямую в коде. Это дает мне полный контроль над контентом и структурой сайта. Работа с Markdown-файлами стала привычной и комфортной.&lt;/p&gt;
+&lt;h2&gt;Преимущества для разработчика&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Локальная разработка&lt;/strong&gt;: Полная версия сайта всегда доступна на моем компьютере&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Версионность&lt;/strong&gt;: Все изменения удобно отслеживаются через Git&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Производительность&lt;/strong&gt;: Статические страницы грузятся практически мгновенно&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Безопасность&lt;/strong&gt;: Отсутствие базы данных и уязвимого backend'а&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Гибкость настройки&lt;/h2&gt;
+&lt;p&gt;Pelican оказался идеальным для кастомизации:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Создала собственную тему на основе Bootstrap 5&lt;/li&gt;
+&lt;li&gt;Настроила систему тегов и категорий для организации контента&lt;/li&gt;
+&lt;li&gt;Реализовала кастомные страницы для проектов разного типа&lt;/li&gt;
+&lt;li&gt;Легко интегрировала JavaScript-компоненты для интерактивности&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Технический стек&lt;/h2&gt;
+&lt;p&gt;Мое портфолио работает на проверенной связке технологий:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Pelican&lt;/strong&gt; — генерация статического контента&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bootstrap 5&lt;/strong&gt; — адаптивная и современная верстка&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Pages&lt;/strong&gt; — бесплатный и надежный хостинг&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Python&lt;/strong&gt; — знакомый и любимый язык программирования&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Итоги выбора&lt;/h2&gt;
+&lt;p&gt;Результат моей работы вы видите прямо сейчас — этот сайт полностью создан на Pelican. Для портфолио разработчика это идеальное решение: минималистичное, быстрое и полностью контролируемое.&lt;/p&gt;
+&lt;p&gt;Pelian доказал, что для многих задач простые инструменты эффективнее сложных CMS. Иногда меньше — действительно значит больше.&lt;/p&gt;</content><category term="Разработка"/><category term="pelican"/><category term="статический-сайт"/><category term="python"/><category term="портфолио"/></entry></feed>
