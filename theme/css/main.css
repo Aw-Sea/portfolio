@@ -1,0 +1,431 @@
+/* ==================== */
+/* ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ */
+/* ==================== */
+:root {
+    /* Цветовая схема */
+    --header-bg: #2c3e50;     /* Темно-синий для шапки */
+    --footer-bg: #2c3e50;     /* Темно-синий для футера */
+    --main-bg: #f8f9fa;       /* Светлый серый фон */
+    --content-bg: #ffffff;    /* Белый фон контента */
+    --primary: #3498db;       /* Основной акцентный цвет */
+    --secondary: #e74c3c;     /* Второстепенный цвет */
+    --text-dark: #2c3e50;     /* Цвет основного текста */
+    --text-light: #ecf0f1;    /* Цвет текста на темном фоне */
+
+    /* Типография */
+    --body-font: 'Segoe UI', Roboto, sans-serif;
+    --heading-font: 'Montserrat', sans-serif;
+
+    /* Тени */
+    --shadow-sm: 0 2px 10px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ==================== */
+/* БАЗОВЫЕ СТИЛИ */
+/* ==================== */
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--main-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h6 {
+    font-family: var(--heading-font);
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Специальный стиль для h5 в карточках */
+.card-header h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    color: white !important;
+}
+
+/* Ссылки */
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary);
+}
+
+/* ==================== */
+/* КОМПОНЕНТЫ САЙТА */
+/* ==================== */
+/* Шапка */
+header {
+    background-color: var(--header-bg);
+    color: var(--text-light);
+}
+
+.navbar-custom {
+    padding: 1rem 0;
+}
+
+/* Основное содержимое */
+.content-wrapper {
+    background-color: var(--content-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    padding: 2rem;
+    margin: 2rem 0;
+    flex: 1;
+}
+
+/* Подвал */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--text-light);
+    margin-top: auto;
+}
+
+/* Карточки */
+.card {
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Бейджи */
+.badge {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    font-weight: normal;
+    border-radius: 4px;
+}
+
+/* Кнопки */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+/* ==================== */
+/* СТРАНИЦЫ */
+/* ==================== */
+/* Главная страница */
+.home-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Герой-секция */
+.home-header {
+    margin-bottom: 3rem;
+}
+
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border: 6px solid white;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Секция "О себе" */
+.goal-section {
+    background-color: var(--content-bg);
+    border-left: 4px solid var(--primary);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+}
+
+.goal-section h2 {
+    color: var(--primary);
+}
+
+/* Карточки направлений */
+.skills-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    height: 100%;
+    border: none;
+    overflow: hidden;
+}
+
+.skills-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+.skills-card .card-body {
+    padding: 2rem 1.5rem;
+}
+
+.skills-card i {
+    transition: all 0.3s ease;
+}
+
+.skills-card:hover i {
+    transform: scale(1.1);
+}
+
+/* Цвета карточек */
+.card-frontend {
+    background: linear-gradient(135deg, rgba(41,98,255,0.1) 0%, rgba(41,98,255,0.05) 100%);
+    border-bottom: 3px solid var(--primary);
+}
+
+.card-backend {
+    background: linear-gradient(135deg, rgba(46,204,113,0.1) 0%, rgba(46,204,113,0.05) 100%);
+    border-bottom: 3px solid var(--success);
+}
+
+.card-fullstack {
+    background: linear-gradient(135deg, rgba(52,152,219,0.1) 0%, rgba(52,152,219,0.05) 100%);
+    border-bottom: 3px solid var(--info);
+}
+
+.card-seo {
+    background: linear-gradient(135deg, rgba(241,196,15,0.1) 0%, rgba(241,196,15,0.05) 100%);
+    border-bottom: 3px solid var(--warning);
+}
+
+/* CTA секция */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary) 0%, #2874b8 100%);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    margin: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+.cta-section h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-btn {
+    position: relative;
+    z-index: 2;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .home-header {
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 1.5rem;
+    }
+
+    .skills-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Страница "Обо мне" */
+.about-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.skill-header {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* Страница проектов */
+.projects-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-links {
+    margin-top: 1.5rem;
+}
+
+/* Страница резюме */
+.resume-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.resume-page .card {
+    border-radius: 10px;
+}
+
+/* Стили для всех изображений в статьях */
+.article-image {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Рамка вокруг изображений */
+.article-image img {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 4px;
+    display: block;
+}
+
+/* Подпись под изображением */
+.article-image figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    font-size: 0.6em;
+}
+
+/* Специальный класс для маленьких изображений */
+.image-small {
+    max-width: 300px;
+}
+
+/* Специальный класс для изображений с рамкой */
+.image-framed {
+    border: 3px solid #3498db;
+    padding: 10px;
+    background: #f8f9fa;
+}
+
+/* Адаптивные изображения */
+.responsive-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Для разных экранов */
+@media (max-width: 768px) {
+    article img {
+        margin: 10px 0;
+        border-radius: 4px;
+    }
+
+    .image-small {
+        max-width: 250px;
+    }
+}
+
+
+/* Стили для страницы тегов */
+.article-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.article-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.tags-cloud .badge {
+    font-size: 0.9em;
+    padding: 0.5em 0.7em;
+    transition: all 0.3s ease;
+}
+
+.tags-cloud .badge:hover {
+    transform: scale(1.05);
+}
+
+.categories-list a {
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.categories-list a:hover {
+    background-color: #f8f9fa;
+    text-decoration: none;
+}
+
+
+/* ==================== */
+/* УТИЛИТЫ */
+/* ==================== */
+/* Тени */
+.shadow-sm {
+    box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+    box-shadow: var(--shadow-md);
+}
+
+/* Отступы */
+.mt-section {
+    margin-top: 3rem;
+}
+
+.mb-section {
+    margin-bottom: 3rem;
+}
+
+/* Анимации */
+.transition {
+    transition: all 0.3s ease;
+}
